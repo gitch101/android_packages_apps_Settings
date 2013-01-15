@@ -68,6 +68,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
     private static final String KEY_MOD_VERSION = "mod_version";
     private static final String KEY_MOD_BUILD_DATE = "build_date";
+    private static final String KEY_DEVICE_CHIPSET = "device_chipset";
     private static final String KEY_DEVICE_CPU = "device_cpu";
     private static final String KEY_DEVICE_MEMORY = "device_memory";
     private static final String KEY_CM_UPDATES = "cm_updates";
@@ -107,6 +108,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment {
         // Remove selinux information if property is not present
         removePreferenceIfPropertyMissing(getPreferenceScreen(), KEY_SELINUX_STATUS,
                 PROPERTY_SELINUX_STATUS);
+ 	
+	addStringPreference(KEY_DEVICE_CHIPSET,
+                SystemProperties.get("ro.device.chipset", null));	
 
         String cpuInfo = getCPUInfo();
         String memInfo = getMemInfo();

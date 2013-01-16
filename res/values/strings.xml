@@ -4953,6 +4953,11 @@
     <string name="kill_app_longpress_back">Kill app back button</string>
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back key</string>
 
+    <!-- High End Gfx Effects -->
+    <string name="display_category_advanced_title">Advanced</string>
+    <string name="high_end_gfx_title">High end graphic effects</string>
+    <string name="high_end_gfx_summary">Enable graphic effects disabled on lower end devices</string>
+
     <!-- Change Log strings -->
     <string name="changelog_title">View changelog</string>
     <string name="changelog_loading">Loading changelog\u2026</string>
